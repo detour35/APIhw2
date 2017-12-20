@@ -11,7 +11,36 @@
 
 var database = firebase.database();
 
+$(".btn").on("click", function(){
 
+// get the input from the form
+
+var trainName= $(".trainName").val()
+var destination= $(".destination").val()
+var firstTrain= $(".firstTrain").val()
+var frequency= $(".frequency").val()
+
+console.log(trainName);
+console.log(destination);
+console.log(firstTrain);
+console.log(frequency);
+
+
+// push the values to the database
+database.ref().push({
+trainName: trainName,
+destination: destination,
+firstTrain: firstTrain,
+frequency: frequency
+
+})
+
+
+// display the children from the database to the html
+
+
+
+})
 
 
 
